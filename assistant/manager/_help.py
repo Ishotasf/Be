@@ -8,16 +8,16 @@
 from . import *
 
 START = """
-🪅 **Help Menu** 🪅
+⚙️ **Help Menu** ⚙️
 
-✘  /start : Check I am Alive or not.
-✘  /help : Get This Message.
-✘  /repo : Get Bot's Repo..
+➻  /start : Check I am Alive or not.
+➻  /help : Get This Message.
+➻  /repo : Get Bot's Repo..
 
-🧑‍💻 Join **@TeamUltroid**
+🧑‍💻 Join **@TatsuyaMusicStream**
 """
 
-ADMINTOOLS = """✘ **AdminTools** ✘
+ADMINTOOLS = """ **AdminTools** 
 
 • /pin : Pins the Replied Message
 • /pinned : Get Pinned message in chat.
@@ -39,7 +39,7 @@ ADMINTOOLS = """✘ **AdminTools** ✘
 • /delgpic : remove current chat Photo."""
 
 UTILITIES = """
-✘ ** Utilities ** ✘
+ ** Utilities **
 
 • /info (reply/username/id) : get detailed info of user.
 • /id : get chat/user id.
@@ -54,7 +54,7 @@ UTILITIES = """
 """
 
 LOCKS = """
-✘ ** Locks ** ✘
+ ** Locks ** 
 
 • /lock (query) : lock particular content in chat.
 • /unlock (query) : Unlock some content.
@@ -72,12 +72,12 @@ LOCKS = """
 """
 
 MISC = """
-✘  **Misc**  ✘
+  **Misc**  
 
 • /joke : Get Random Jokes.
 • /decide : Decide Something..
 
-**✘ Stickertools ✘**
+** Stickertools **
 • /kang : add sticker to your pack.
 • /listpack : get all of yours pack..
 """
@@ -131,4 +131,4 @@ async def home_aja(e):
 @callback(re.compile("hlp_(.*)"))
 async def do_something(event):
     match = event.pattern_match.group(1).strip().decode("utf-8")
-    await event.edit(STRINGS[match], buttons=Button.inline("<< Back", "mnghome"))
+    await event.edit(STRINGS[match], buttons=Button.inline("◁ Back", "mnghome"))
