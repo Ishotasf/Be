@@ -4,7 +4,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
-✘ Commands Available -
+ Commands Available -
 
 • `{i}eod`
     `Get Event of the Today`
@@ -61,7 +61,7 @@ async def diela(e):
 async def pinterest(e):
     m = e.pattern_match.group(1).strip()
     if not m:
-        return await e.eor("`Give pinterest link.`", time=3)
+        return await e.eor("**Give pinterest link.**", time=3)
     soup = await async_searcher(
         "https://www.expertstool.com/download-pinterest-video/",
         data={"url": m},
