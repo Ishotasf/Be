@@ -5,7 +5,7 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
-✘ Commands Available -
+ Commands Available -
 
 • `{i}tagall`
     Tag Top 100 Members of chat.
@@ -66,7 +66,7 @@ async def _(e):
             if "rec" in okk and not bb.bot and not bb.deleted:
                 xx += f"\n{inline_mention(bb)}"
         if isinstance(y, owner):
-            xx += f"\n꧁{inline_mention(bb)}꧂"
+            xx += f"\n▢{inline_mention(bb)}▢"
         if isinstance(y, admin) and "admin" in okk and not bb.deleted:
             xx += f"\n{inline_mention(bb)}"
         if "all" in okk and not bb.bot and not bb.deleted:
