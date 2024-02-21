@@ -21,20 +21,20 @@ from . import append_or_update, owner_and_sudos
 OWNER = ultroid_bot.full_name
 
 MSG = f"""
-**Ultroid - UserBot**
+**Ryn - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
-**Support**: @TeamUltroid
+**🤴 Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
+**Support 📝**: @TatsuyaMusicStream
 ➖➖➖➖➖➖➖➖➖➖
 """
 
 IN_BTTS = [
     [
         Button.url(
-            "Repository",
-            url="https://github.com/TeamUltroid/Ultroid",
+            "🤴 Owner",
+            url="https://t.me/Usern4DoestExist404",
         ),
-        Button.url("Support", url="https://t.me/UltroidSupportChat"),
+        Button.url("Support 📝", url="https://t.me/TatsuyaMusicStream"),
     ]
 ]
 
@@ -43,7 +43,7 @@ IN_BTTS = [
 
 
 def asst_cmd(pattern=None, load=None, owner=False, **kwargs):
-    """Decorator for assistant's command"""
+    """𝗗𝗲𝗰𝗼𝗿𝗮𝘁𝗼𝗿 𝗳𝗼𝗿 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁'𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱"""
     name = inspect.stack()[1].filename.split("/")[-1].replace(".py", "")
     kwargs["forwards"] = False
 
@@ -67,7 +67,7 @@ def asst_cmd(pattern=None, load=None, owner=False, **kwargs):
 
 
 def callback(data=None, from_users=[], admins=False, owner=False, **kwargs):
-    """Assistant's callback decorator"""
+    """𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁'𝘀 𝗰𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗱𝗲𝗰𝗼𝗿𝗮𝘁𝗼𝗿"""
     if "me" in from_users:
         from_users.remove("me")
         from_users.append(ultroid_bot.uid)
@@ -91,7 +91,7 @@ def callback(data=None, from_users=[], admins=False, owner=False, **kwargs):
 
 
 def in_pattern(pattern=None, owner=False, **kwargs):
-    """Assistant's inline decorator."""
+    """𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁'𝘀 𝗶𝗻𝗹𝗶𝗻𝗲 𝗱𝗲𝗰𝗼𝗿𝗮𝘁𝗼𝗿."""
 
     def don(func):
         async def wrapper(event):
@@ -99,11 +99,11 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 res = [
                     await event.builder.article(
                         title="Ultroid Userbot",
-                        url="https://t.me/TeamUltroid",
-                        description="(c) TeamUltroid",
+                        url="https://t.me/TatsuyaMusicStream",
+                        description="(c) TatsuyaMusicStream",
                         text=MSG,
                         thumb=InputWebDocument(
-                            "https://graph.org/file/dde85d441fa051a0d7d1d.jpg",
+                            "https://telegra.ph/file/b532ea30e4848301684c3.jpg",
                             0,
                             "image/jpeg",
                             [],
@@ -134,7 +134,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/UltroidSupportChat"
+                                    "Support", "https://t.me/TatsuyaMusicStream"
                                 ),
                             )
                         ]
