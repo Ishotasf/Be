@@ -32,7 +32,7 @@ async def kang_cmd(ult):
     if not isinstance(sender, User):
         return
     if not ult.is_reply:
-        return await ult.eor("`Reply to a sticker/photo..`", time=5)
+        return await ult.eor("**Reply to a sticker/photo...**", time=5)
     reply = await ult.get_reply_message()
     if sender.username:
         pre = sender.username[:4]
@@ -61,7 +61,7 @@ async def kang_cmd(ult):
     elif reply.text:
         dl = await Quotly().create_quotly(reply)
     else:
-        return await ult.eor("`Reply to sticker or text to add it in your pack...`")
+        return await ult.eor("**Reply to sticker or text to add it in your pack...**")
     if not emoji:
         emoji = "🏵"
     if dl:
@@ -97,7 +97,7 @@ async def kang_cmd(ult):
                     stickers=[SetItem(file, emoji=emoji)],
                     videos=video,
                     animated=animated,
-                    software="@TeamUltroid",
+                    software="@TatsuyaMusicStream",
                 )
             )
         except Exception as er:
