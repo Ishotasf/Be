@@ -84,7 +84,7 @@ The Ultroid Userbot
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n▢ <b>RynUbot Version -><b> <code>{}</code>\n➻ <b>PyUltroid -></b> <code>{}</code>\n➻ <b>Python -></b> <code>{}</code>\n➻ <b>Uptime -></b> <code>{}</code>\n➻ <b>Branch -></b>[ {} ]\n\n➻ <b>Join @TatsuyaMusicStream</b>"
 
 
 @callback("alive")
@@ -130,7 +130,7 @@ async def lol(ult):
         )
 
         if _e := udB.get_key("ALIVE_EMOJI"):
-            als = als.replace("🌀", _e)
+            als = als.replace("⚜️", _e)
     else:
         parse = "md"
         als = (get_string("alive_1")).format(
@@ -145,7 +145,7 @@ async def lol(ult):
         )
 
         if a := udB.get_key("ALIVE_EMOJI"):
-            als = als.replace("✵", a)
+            als = als.replace("💠", a)
     if pic:
         try:
             await ult.reply(
@@ -183,7 +183,7 @@ async def lol(ult):
 @ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
-    x = await event.eor("Pong !")
+    x = await event.eor("🏓 𝗦𝗲𝗽𝗼𝗻𝗴 !")
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
     await x.edit(get_string("ping").format(end, uptime))
@@ -272,7 +272,7 @@ async def inline_alive(ult):
     )
 
     if _e := udB.get_key("ALIVE_EMOJI"):
-        als = als.replace("🌀", _e)
+        als = als.replace("⚜️", _e)
     builder = ult.builder
     if pic:
         try:
@@ -292,7 +292,7 @@ async def inline_alive(ult):
                     await builder.document(
                         pic,
                         title="Inline Alive",
-                        description="@TeamUltroid",
+                        description="@TatsuyaMusicStream",
                         parse_mode="html",
                         buttons=buttons,
                     )
@@ -350,7 +350,7 @@ async def updava(event):
     await asst.send_file(
         udB.get_key("LOG_CHANNEL"),
         ULTPIC(),
-        caption="• **Update Available** •",
+        caption=" **Update Available** ",
         force_document=False,
         buttons=Button.inline("Changelogs", data="changes"),
     )
